@@ -1,5 +1,5 @@
 .idea/
-db/
+db/*.*
 
 .env
 certs/
