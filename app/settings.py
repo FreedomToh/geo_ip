@@ -10,7 +10,7 @@ logging.basicConfig(
     level=logging.DEBUG, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
 )
 
-DB_PATH = os.getenv("DB_PATH", "")
+DB_PATH = os.getenv("DB_FILE", "")
 if not os.path.exists(DB_PATH):
     raise Exception("No geoip database")
 
