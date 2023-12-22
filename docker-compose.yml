@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  geoip.telezon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: geoip.telezon
+    restart: always
+    networks:
+      - docker_nw
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    ports:
+      - "${PORT}:8000"
+
+networks:
+    docker_nw:
+        driver: bridge
+        external: true
